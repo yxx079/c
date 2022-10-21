@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "bst.c"
-#include "bst.h"
-
-#include <stdio.h>
-#include <assert.h>
-
 #include "bst.h"
 
 int main() {
