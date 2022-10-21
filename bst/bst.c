@@ -173,15 +173,18 @@ Node * removeSubtree(Node * root, int value){
 }
 
 int nodeDepth (Node * root, Node * N){
-if (root == NULL || N == NULL)
+      int sub_depth=0;
+  if (root == NULL || N == NULL)
     return -1;
-  if (root == N)
-    return 0;
+  if (root->value == N->value)
+    return sub_depth;
+  if(root->value<N->value){
+    
+       return sub_depth=nodeDepth(root->left,N)+1;
+    }
+    if(root->value == N->value){
+       return sub_depth=nodeDepth(root->right,N)+1;
+    }
+  
 
-  int sub_depth = nodeDepth(root->value < N->value ? root->left : root->right, N);
-
-  if (sub_depth >= 0)
-    return sub_depth + 1;
-  else
-    return -1;
 }

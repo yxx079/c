@@ -23,11 +23,9 @@ int main() {
   assert(c == 1);
 
   c = nodeDepth(a,b);
-  printf("%d\n",c);
   assert(c == 1);
 
   a = removeSubtree(a, 2);
-  printf("%d",a->value);
   
   return 0;
 }
