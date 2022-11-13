@@ -9,13 +9,14 @@ pthread_rwlock_t rwlock=PTHREAD_RWLOCK_INITIALIZER;
 
 void *downtime() {
     for(int i=0;i<3;i++){
+          sleep(2);
    
        pthread_rwlock_rdlock(&rwlock);
        Node *temp=root;
        root = balanceTree(temp);
        freeSubtree(temp);
        pthread_rwlock_unlock(&rwlock);
-        sleep(2);
+      
 
     }
 return NULL;
