@@ -182,7 +182,7 @@ int nodeDepth (Node * root, Node * N){
     
        return sub_depth=nodeDepth(root->left,N)+1;
     }
-    if(root->value == N->value){
+  if(root->value > N->value){
        return sub_depth=nodeDepth(root->right,N)+1;
     }
   
